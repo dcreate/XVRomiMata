@@ -106,7 +106,7 @@ p {
 
 
 /* =====================================================
-   APERTURA
+   APERTURA CON IMAGEN
 ===================================================== */
 
 #opening {
@@ -119,10 +119,149 @@ p {
 
     overflow: hidden;
 
-    background:
-        var(--green-dark);
+    background: #2F4228;
 }
 
+
+/* =====================================================
+   PANELES DE IMAGEN
+===================================================== */
+
+.opening-panel {
+
+    position: absolute;
+
+    top: 0;
+
+    width: 50%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 5;
+
+    transition:
+        transform 1.8s
+        cubic-bezier(.77, 0, .18, 1);
+}
+
+
+/* =====================================================
+   IMAGEN
+===================================================== */
+
+.opening-panel img {
+
+    position: absolute;
+
+    top: 0;
+
+    width: 200%;
+
+    height: 100%;
+
+    max-width: none;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   MITAD IZQUIERDA
+===================================================== */
+
+.opening-panel-left {
+
+    left: 0;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,.15);
+}
+
+
+.opening-panel-left img {
+
+    left: 0;
+}
+
+
+/* =====================================================
+   MITAD DERECHA
+===================================================== */
+
+.opening-panel-right {
+
+    right: 0;
+
+    border-left:
+        1px solid
+        rgba(255,255,255,.15);
+}
+
+
+.opening-panel-right img {
+
+    right: 0;
+}
+
+
+/* =====================================================
+   SOMBRA EN EL CENTRO
+===================================================== */
+
+.opening-panel-left::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 80px;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to left,
+            rgba(0,0,0,.25),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+.opening-panel-right::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 80px;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,.25),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTENIDO SOBRE LA IMAGEN
+===================================================== */
 
 .opening-content {
 
@@ -136,12 +275,11 @@ p {
     transform:
         translate(-50%, -50%);
 
+    width: 90%;
+
     text-align: center;
 
-    color:
-        var(--white);
-
-    width: 90%;
+    color: white;
 
     transition:
         opacity .8s ease;
@@ -161,7 +299,6 @@ p {
         crownFloat 3s ease-in-out infinite;
 }
 
-
 .opening-small {
 
     font-size: 11px;
@@ -173,7 +310,6 @@ p {
     opacity: .9;
 }
 
-
 .opening-content h1 {
 
     font-size:
@@ -184,7 +320,6 @@ p {
     color:
         var(--green-light);
 }
-
 
 .opening-name {
 
@@ -202,6 +337,42 @@ p {
 }
 
 
+/* =====================================================
+   APERTURA
+===================================================== */
+
+#opening.open
+.opening-panel-left {
+
+    transform:
+        translateX(-100%);
+}
+
+
+#opening.open
+.opening-panel-right {
+
+    transform:
+        translateX(100%);
+}
+
+
+#opening.open
+.opening-content {
+
+    opacity: 0;
+}
+
+
+#opening.hidden {
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition:
+        opacity .8s ease .9s;
+}
 #openInvitation {
 
     border:
@@ -238,7 +409,6 @@ p {
         blur(5px);
 }
 
-
 #openInvitation:hover {
 
     background:
@@ -254,81 +424,6 @@ p {
         0 10px 30px
         rgba(201,163,78,.3);
 }
-
-
-/* =====================================================
-   TELONES
-===================================================== */
-
-.curtain {
-
-    position: absolute;
-
-    top: 0;
-
-    width: 50%;
-
-    height: 100%;
-
-    z-index: 5;
-
-    background-image:url("img/foto3.jpg");
-    background-size: cover;
-    background-position: center;
-
-    box-shadow:
-        inset 0 0 80px
-        rgba(0,0,0,.25);
-
-    transition:
-        transform 1.8s
-        cubic-bezier(.77,0,.18,1);
-}
-
-
-.curtain-left {
-    left: 0;
-}
-
-.curtain-right {
-    right: 0;
-
-    transform:
-        scaleX(-1);
-}
-
-
-#opening.open .curtain-left {
-
-    transform:
-        translateX(-100%);
-}
-
-
-#opening.open .curtain-right {
-
-    transform:
-        translateX(100%)
-        scaleX(-1);
-}
-
-
-#opening.open .opening-content {
-
-    opacity: 0;
-}
-
-
-#opening.hidden {
-
-    pointer-events: none;
-
-    opacity: 0;
-
-    transition:
-        opacity .8s ease .9s;
-}
-
 
 /* =====================================================
    HERO

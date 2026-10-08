@@ -382,7 +382,7 @@ p {
         rgba(255,255,255,.08);
 
     color:
-        white;
+        rgb(7, 7, 7);
 
     padding:
         15px 28px;
@@ -1415,7 +1415,7 @@ blockquote {
         50%;
 
     background:
-        #BDD395;
+        #B2C8D6;
 
     margin:
         25px auto 10px;

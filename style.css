@@ -272,21 +272,9 @@ p {
 
     z-index: 5;
 
-    background:
-
-        repeating-linear-gradient(
-            90deg,
-            rgba(47,66,40,.18) 0px,
-            rgba(255,255,255,.08) 10px,
-            rgba(47,66,40,.18) 22px
-        ),
-
-        linear-gradient(
-            90deg,
-            #2F4228,
-            #78995F,
-            #4F6841
-        );
+    background-image:url("img/foto3.jpg");
+    background-size: cover;
+    background-position: center;
 
     box-shadow:
         inset 0 0 80px

@@ -6,7 +6,7 @@ const CONFIG = {
 
     nombre: "Helen Romina",
 
-    fechaEvento: "2026-12-19T20:00:00",
+    fechaEvento: "2026-12-20T20:00:00",
 
     hashtag: "#XVHelen Romina",
 

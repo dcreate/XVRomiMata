@@ -6,12 +6,12 @@ const CONFIG = {
 
     nombre: "Helen Romina",
 
-    fechaEvento: "2026-12-20T20:00:00",
+    fechaEvento: "2026-12-20T19:00:00",
 
-    hashtag: "#XVHelen Romina",
+    hashtag: "#XVHelenRomina",
 
     whatsapp:
-        "5217851012456",
+        "5217851085098",
 
     mensajeWhatsApp:
         "Hola, confirmo mi asistencia a los XV de Helen Romina.",

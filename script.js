@@ -8,7 +8,7 @@ const CONFIG = {
 
     fechaEvento: "2026-12-20T19:00:00",
 
-    hashtag: "#XVHelenRomina",
+    hashtag: "#HelenMata",
 
     whatsapp:
         "5217851085098",

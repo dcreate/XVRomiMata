@@ -14,7 +14,7 @@ const CONFIG = {
         "5217851085098",
 
     mensajeWhatsApp:
-        "¡Hola! Con mucho gusto confirmo mi asistencia a la celebración de los XV años de Romi Mata. 🥳✨. Mi nombre es: ____________. ¡Muchas gracias por la invitación! Será un placer acompañarla en este día tan especial. 💖",
+        "¡Hola! Con mucho gusto confirmo mi asistencia a la celebración de los XV años de Romi Mata.  Mi nombre es: ____________.  ¡Muchas gracias por la invitación! Será un placer acompañarla en este día tan especial.",
 
     musica:
         "musica.mp3"
